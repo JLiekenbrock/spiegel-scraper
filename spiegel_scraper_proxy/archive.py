@@ -6,21 +6,12 @@ import requests
 import lxml.html
 import tldextract
 
-from fp.fp import FreeProxy
-
-proxy = FreeProxy(country_id=['DE'],timeout=.5).get()
-
-proxie = proxy.split("://",1)
-
-proxie = {proxy[0]:proxy[1]}
-
-
-def by_date(date: dt.date):
-    html = html_by_date(date)
+def by_date(date: dt.date,proxie):
+    html = html_by_date(date,proxie)
     return scrape_html(html)
 
 
-def html_by_date(date: dt.date, proxie=proxie):
+def html_by_date(date: dt.date, proxie):
     archive_url = f'https://www.spiegel.de/nachrichtenarchiv/artikel-{date.strftime("%d.%m.%Y")}.html'
     resp = requests.get(archive_url, proxies=proxie)
     return resp.text
