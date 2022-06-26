@@ -1,7 +1,7 @@
 # spiegel-scraper_proxy
 [![PyPI](https://img.shields.io/pypi/v/spiegel-scraper)](https://pypi.org/project/spiegel-scraper/)
 
-Scrape articles and comments from DER SPIEGEL using a proxy-server.
+Scrape articles and comments from DER SPIEGEL using a proxy-server. Probably still needs sessions.
 
 ## Setup
 ```bash
@@ -11,7 +11,13 @@ pip install spiegel-scraper_proxy
 ## Usage
 ```python
 from datetime import date
-import spiegel_scraper as spon
+import scraper-scraper_proxy as spon
+
+from fp.fp import FreeProxy
+
+proxy = FreeProxy(country_id=['DE'],timeout=.5).get()
+proxie = proxy.split("://",1)
+proxie = {proxie[0]:proxie[1]}
 
 # list all articles from 2020-01-31
 archive_entries = spon.archive.by_date(date(2020, 1, 31),proxie)
