@@ -9,12 +9,12 @@ readme = (here / 'README.md').read_text()
 
 # This call to setup() does all the work
 setup(
-    name='spiegel-scraper',
+    name='spiegel-scraper_proxy',
     version='1.1.1',
     description='Scrape article metadata and comments from DER SPIEGEL',
     long_description=readme,
     long_description_content_type='text/markdown',
-    url='https://github.com/ietz/spiegel-scraper',
+    url='https://github.com/ietz/spiegel-scraper_proxy',
     author='Tim Pietz',
     author_email='tim@pietz.me',
     license='MIT',
@@ -31,5 +31,6 @@ setup(
         'lxml',
         'requests',
         'tldextract',
+        'FreeProxy'
     ],
 )
