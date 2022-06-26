@@ -1,7 +1,7 @@
 # spiegel-scraper_proxy
 [![PyPI](https://img.shields.io/pypi/v/spiegel-scraper)](https://pypi.org/project/spiegel-scraper/)
 
-Scrape articles and comments from DER SPIEGEL
+Scrape articles and comments from DER SPIEGEL using a proxy-server.
 
 ## Setup
 ```bash
