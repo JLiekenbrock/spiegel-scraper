@@ -31,6 +31,5 @@ setup(
         'lxml',
         'requests',
         'tldextract',
-        'free-proxy'
     ],
 )
